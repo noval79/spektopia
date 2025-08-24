@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaktopia - Quiz</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 90%;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+    .question {
+      margin-bottom: 20px;
+    }
+    .btn-option {
+      margin: 5px;
+      font-size: 14px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      border: 2px solid #007bff;
+    }
+    .btn-option:hover {
+      transform: scale(1.05);
+    }
+    .btn-correct {
+      background-color: #28a745 !important;
+      color: white !important;
+      border: none !important;
+    }
+    .btn-wrong {
+      background-color: #dc3545 !important;
+      color: white !important;
+      border: none !important;
+    }
+    .nav-btn {
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+    }
+    .home-btn { background-color: #007bff; }
+    .prev-btn { background-color: #6c757d; }
+    .next-btn { background-color: #28a745; }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <h1 class="text-center text-danger">Let's Warm Up</h1>
+    <p class="text-center text-muted">Watch the following video to answer the questions!</p>
+
+    <!-- Video Container -->
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/fAl8q9HMYa8?autoplay=0&rel=0&showinfo=0"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+    <small class="text-center d-block mb-3">Source: 🇮🇩 Ani Meitkasari</small>
+
+    <!-- Questions -->
+    <div class="questions">
+      <div class="question" data-correct="2">
+        <p><strong>1. What are they talking about?</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Fishing</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Cooking</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Vacation</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Staying</button>
+        </div>
+      </div>
+
+      <div class="question" data-correct="0">
+        <p><strong>2. Where did Nilam go a week ago?</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Grandparent’s house</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Family’s house</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Kitchen</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. River</button>
+        </div>
+      </div>
+
+      <div class="question" data-correct="1">
+        <p><strong>3. What did Nilam do with her grandma?</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Gardening</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Cooking</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Swimming</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Fishing</button>
+        </div>
+      </div>
+
+      <div class="question" data-correct="3">
+        <p><strong>4. How Rendi felt about his vacation?</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Happy</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Amazing</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. OK</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Terrible</button>
+        </div>
+      </div>
+
+      <div class="question" data-correct="1">
+        <p><strong>5. The word “enjoyable” is closest in meaning to …</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Boring</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Pleasant</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Difficult</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Harmful</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="d-flex justify-content-center mt-4 gap-3">
+      <button class="btn nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <button class="btn nav-btn home-btn" onclick="window.location.href='first.html'"><i class="fas fa-home"></i></button>
+      <button class="btn nav-btn next-btn" onclick="window.location.href='quiz2.html'"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Audio Effects -->
+  <audio id="correctSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+  <audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+
+  <script>
+    // Ambil semua tombol jawaban
+    document.querySelectorAll('.btn-option').forEach(button => {
+      button.addEventListener('click', function () {
+        const question = this.closest('.question');
+        const correctIndex = parseInt(question.getAttribute('data-correct'));
+        const userAnswer = parseInt(this.getAttribute('data-answer'));
+
+        const correctSound = document.getElementById('correctSound');
+        const wrongSound = document.getElementById('wrongSound');
+
+        // Cek apakah sudah benar
+        if (this.classList.contains('btn-correct')) return;
+
+        // Reset warna lainnya
+        question.querySelectorAll('.btn-option').forEach(btn => {
+          btn.classList.remove('btn-wrong');
+        });
+
+        // Cek jawaban
+        if (userAnswer === correctIndex) {
+  this.classList.add('btn-correct');
+  correctSound.play();
+
+  // Kunci semua tombol di soal ini
+  question.querySelectorAll('.btn-option').forEach(btn => {
+    btn.disabled = true;
+  });
+} else {
+  this.classList.add('btn-wrong');
+  wrongSound.play();
+}
+      });
+    });
+
+    // Font Awesome
+    document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">');
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
