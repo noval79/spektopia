@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speaktopia - Quiz 2</title>
+  <title>Speaktopia - Quiz</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
@@ -22,22 +22,23 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .video-container {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: #000;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
     .question {
       margin-bottom: 20px;
     }
@@ -85,74 +86,75 @@
     <p class="text-center text-muted">Watch the following video to answer the questions!</p>
 
     <!-- Video Container -->
-    <div class="video-container">
-      <iframe 
-        src="https://www.youtube.com/embed/c91UhhD6pw8?autoplay=0&rel=0&showinfo=0"
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <small class="text-center d-block mb-3">Source: 🇮🇩 Fathulloh Hasan</small>
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/fAl8q9HMYa8?autoplay=0&rel=0&showinfo=0"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+    <small class="text-center d-block mb-3">Source: 🇮🇩 Ani Meitkasari</small>
 
     <!-- Questions -->
     <div class="questions">
-      <div class="question" data-correct="0">
-        <p><strong>6. What is the main idea of the text?</strong></p>
+      <div class="question" data-correct="2">
+        <p><strong>1. What are they talking about?</strong></p>
         <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. The speaker’s unforgettable holiday in Bali.</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. The speaker’s first experience riding a banana boat.</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. The beauty of monkeys in the forest.</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. The shopping experience in Tukawanti Park.</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Fishing</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Cooking</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Vacation</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Staying</button>
+        </div>
+      </div>
+
+      <div class="question" data-correct="0">
+        <p><strong>2. Where did Nilam go a week ago?</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Grandparent’s house</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Family’s house</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Kitchen</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. River</button>
         </div>
       </div>
 
       <div class="question" data-correct="1">
-        <p><strong>7. Where did the speaker and friends see the sunrise?</strong></p>
+        <p><strong>3. What did Nilam do with her grandma?</strong></p>
         <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Tanah Lot</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. The sunrise gallery</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Saturn Manoa beach</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Tukawanti Park</button>
-        </div>
-      </div>
-
-      <div class="question" data-correct="2">
-        <p><strong>8. What water sport did the speaker play during the holiday?</strong></p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Diving</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Surfing</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Banana boat</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Jet skiing</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Gardening</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Cooking</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Swimming</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Fishing</button>
         </div>
       </div>
 
       <div class="question" data-correct="3">
-        <p><strong>9. What animals did the speaker see in the garden?</strong></p>
+        <p><strong>4. How Rendi felt about his vacation?</strong></p>
         <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Birds</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Deer</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Cats</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Monkeys</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Happy</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Amazing</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. OK</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Terrible</button>
         </div>
       </div>
 
       <div class="question" data-correct="1">
-        <p><strong>10. The word “panoramic” in the video is closest in meaning to…</strong></p>
+        <p><strong>5. The word “enjoyable” is closest in meaning to …</strong></p>
         <div class="d-flex flex-wrap gap-2">
           <button class="btn btn-outline-primary btn-option" data-answer="0">A. Boring</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Wide and beautiful</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Ordinary</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Dangerous</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Pleasant</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Difficult</button>
+          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Harmful</button>
         </div>
       </div>
     </div>
 
     <!-- Navigation Buttons -->
     <div class="d-flex justify-content-center mt-4 gap-3">
-  <button class="btn nav-btn prev-btn" onclick="window.location.href='quiz1.html'"><i class="fas fa-chevron-left"></i></button>
+  <button class="btn nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
   <button class="btn nav-btn home-btn" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
-  <button class="btn nav-btn next-btn" onclick="window.location.href='reflection.html'"><i class="fas fa-chevron-right"></i></button>
+  <button class="btn nav-btn next-btn" onclick="window.location.href='quiz2.html'"><i class="fas fa-chevron-right"></i></button>
 </div>
   </div>
 
@@ -181,17 +183,17 @@
 
         // Cek jawaban
         if (userAnswer === correctIndex) {
-          this.classList.add('btn-correct');
-          correctSound.play();
+  this.classList.add('btn-correct');
+  correctSound.play();
 
-          // Kunci semua tombol di soal ini
-          question.querySelectorAll('.btn-option').forEach(btn => {
-            btn.disabled = true;
-          });
-        } else {
-          this.classList.add('btn-wrong');
-          wrongSound.play();
-        }
+  // Kunci semua tombol di soal ini
+  question.querySelectorAll('.btn-option').forEach(btn => {
+    btn.disabled = true;
+  });
+} else {
+  this.classList.add('btn-wrong');
+  wrongSound.play();
+}
       });
     });
 

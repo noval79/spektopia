@@ -3,202 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speaktopia - Quiz</title>
+  <title>Speaktopia - Tell it Like it Happened!</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      background-color: #f0f2f5;
+      background-color: #d0d0d0;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #333;
     }
     .container {
-      max-width: 90%;
-      margin: 40px auto;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 16px;
       background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
-    .video-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #000;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    .logo {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      margin: 20px auto;
+    }
+    .title {
+      font-size: 2rem;
+      color: #e70000;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #0066cc;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .btn-start {
+  background-color: #FFB300;
+  color: white;
   border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-    .question {
-      margin-bottom: 20px;
+    .btn-start:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    .btn-option {
-      margin: 5px;
-      font-size: 14px;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      border: 2px solid #007bff;
-    }
-    .btn-option:hover {
-      transform: scale(1.05);
-    }
-    .btn-correct {
-      background-color: #28a745 !important;
-      color: white !important;
-      border: none !important;
-    }
-    .btn-wrong {
-      background-color: #dc3545 !important;
-      color: white !important;
-      border: none !important;
-    }
-    .nav-btn {
-      margin: 10px;
-      width: 50px;
-      height: 50px;
+    .help-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
+      background-color: #FFD700;
+      color: black;
+      font-size: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 10;
     }
-    .home-btn { background-color: #007bff; }
-    .prev-btn { background-color: #6c757d; }
-    .next-btn { background-color: #28a745; }
+    .help-btn:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
 
-  <div class="container mt-4">
-    <h1 class="text-center text-danger">Let's Warm Up</h1>
-    <p class="text-center text-muted">Watch the following video to answer the questions!</p>
-
-    <!-- Video Container -->
-<div class="video-container">
-  <iframe 
-    src="https://www.youtube.com/embed/fAl8q9HMYa8?autoplay=0&rel=0&showinfo=0"
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-</div>
-    <small class="text-center d-block mb-3">Source: 🇮🇩 Ani Meitkasari</small>
-
-    <!-- Questions -->
-    <div class="questions">
-      <div class="question" data-correct="2">
-        <p><strong>1. What are they talking about?</strong></p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Fishing</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Cooking</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Vacation</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Staying</button>
-        </div>
-      </div>
-
-      <div class="question" data-correct="0">
-        <p><strong>2. Where did Nilam go a week ago?</strong></p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Grandparent’s house</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Family’s house</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Kitchen</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. River</button>
-        </div>
-      </div>
-
-      <div class="question" data-correct="1">
-        <p><strong>3. What did Nilam do with her grandma?</strong></p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Gardening</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Cooking</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Swimming</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Fishing</button>
-        </div>
-      </div>
-
-      <div class="question" data-correct="3">
-        <p><strong>4. How Rendi felt about his vacation?</strong></p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Happy</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Amazing</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. OK</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Terrible</button>
-        </div>
-      </div>
-
-      <div class="question" data-correct="1">
-        <p><strong>5. The word “enjoyable” is closest in meaning to …</strong></p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-primary btn-option" data-answer="0">A. Boring</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="1">B. Pleasant</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="2">C. Difficult</button>
-          <button class="btn btn-outline-primary btn-option" data-answer="3">D. Harmful</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation Buttons -->
-    <div class="d-flex justify-content-center mt-4 gap-3">
-      <button class="btn nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-      <button class="btn nav-btn home-btn" onclick="window.location.href='first.html'"><i class="fas fa-home"></i></button>
-      <button class="btn nav-btn next-btn" onclick="window.location.href='quiz2.html'"><i class="fas fa-chevron-right"></i></button>
-    </div>
+  <!-- Help Button -->
+  <div class="help-btn" onclick="showHelp()">
+    ?
   </div>
 
-  <!-- Audio Effects -->
-  <audio id="correctSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
-  <audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+  <!-- Main Container -->
+  <div class="container">
+    <h1 class="title">SPEAKTOPIA</h1>
+    <p class="subtitle">Tell it Like it Happened!</p>
+
+    <!-- Character Image -->
+    <img src="robot.png" alt="Speaktopia Robot" class="logo" />
+
+    <!-- Form Inputs -->
+    <!-- Form Inputs -->
+<form id="startForm">
+  <div class="form-group">
+    <input type="text" class="form-control" id="nameInput" placeholder="Name" required />
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="classInput" placeholder="Class" required />
+  </div>
+
+  <button type="submit" class="btn btn-start">Let's Start It!</button>
+</form>
+  </div>
+
+  <!-- Help Modal -->
+  <!-- Help Modal -->
+<div id="helpModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #f9f9f9; padding: 30px; border-radius: 16px; max-width: 80%; max-height: 90vh; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h2 style="color: #e70000; font-size: 1.8rem;">✨ Welcome to Spektopia ✨</h2>
+      <p style="color: #333; font-style: italic;">Your fun and interactive English learning adventure starts here!</p>
+    </div>
+
+    <!-- Content -->
+    <div style="font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333;">
+      <div style="margin-bottom: 20px;">
+        <strong><span style="color: #ff5722;">🏠 Cover Page</span></strong>
+        <ul style="padding-left: 20px; margin-top: 5px;">
+          <li>Enter your name and class in the space provided.</li>
+          <li>Click the “Start” button to begin your learning journey!</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <strong><span style="color: #ff5722;">🔥 Warm Up</span></strong>
+        <ul style="padding-left: 20px; margin-top: 5px;">
+          <li>Watch the video provided.</li>
+          <li>Answer each question by clicking on one of the answer choices.</li>
+          <li>Your answer will be checked automatically!</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <strong><span style="color: #ff5722;">📖 Story Time</span></strong>
+        <ul style="padding-left: 20px; margin-top: 5px;">
+          <li>Read the exciting story on the screen.</li>
+          <li>Want to listen instead? Click the speaker button (🔊) to hear the story narration.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <strong><span style="color: #ff5722;">✏️ Create Your Story</span></strong>
+        <ul style="padding-left: 20px; margin-top: 5px;">
+          <li>Write your own version of the story in the “Type here” box.</li>
+          <li>Need help? Click the SOS button (🚨) to see a sample answer.</li>
+          <li>Click the mic button (🎤) to listen to how the words or sentences are pronounced so you can practice saying them correctly.</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px; font-weight: bold; font-size: 1.2rem;">
+        <p>Have fun learning and creating in Spektopia!<br>
+           Practice makes perfect. Let’s speak with confidence!</p>
+      </div>
+    </div>
+
+    <!-- Close Button -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="closeHelp()" style="background: #FFB300; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem;">
+        Got It!
+      </button>
+    </div>
+  </div>
+</div>
 
   <script>
-    // Ambil semua tombol jawaban
-    document.querySelectorAll('.btn-option').forEach(button => {
-      button.addEventListener('click', function () {
-        const question = this.closest('.question');
-        const correctIndex = parseInt(question.getAttribute('data-correct'));
-        const userAnswer = parseInt(this.getAttribute('data-answer'));
+    // Show help modal when "?" is clicked
+    function showHelp() {
+      document.getElementById('helpModal').style.display = 'block';
+    }
 
-        const correctSound = document.getElementById('correctSound');
-        const wrongSound = document.getElementById('wrongSound');
+    function closeHelp() {
+      document.getElementById('helpModal').style.display = 'none';
+    }
 
-        // Cek apakah sudah benar
-        if (this.classList.contains('btn-correct')) return;
+    // Handle form submission
+    document.getElementById('startForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('nameInput').value.trim();
+  const classValue = document.getElementById('classInput').value.trim();
 
-        // Reset warna lainnya
-        question.querySelectorAll('.btn-option').forEach(btn => {
-          btn.classList.remove('btn-wrong');
-        });
-
-        // Cek jawaban
-        if (userAnswer === correctIndex) {
-  this.classList.add('btn-correct');
-  correctSound.play();
-
-  // Kunci semua tombol di soal ini
-  question.querySelectorAll('.btn-option').forEach(btn => {
-    btn.disabled = true;
-  });
-} else {
-  this.classList.add('btn-wrong');
-  wrongSound.play();
-}
-      });
-    });
-
-    // Font Awesome
-    document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">');
+  if (name && classValue) {
+    localStorage.setItem('userName', name);
+    localStorage.setItem('userClass', classValue);
+    window.location.href = 'quiz1.html'; // ← GANTI JADI quiz1.html
+  } else {
+    alert("Please fill in both fields!");
+  }
+});
   </script>
 
   <!-- Bootstrap JS -->
